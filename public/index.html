@@ -2,29 +2,84 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>App học tiếng Anh</title>
-  
   <link rel="stylesheet" href="style.css">
-  
   <link rel="manifest" href="manifest.json">
-  
   <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
 
-  <div class="container">
-    <header>
-      <h1>Chào buổi chiều!</h1>
-      <p>Giữ streak của bạn bằng cách luyện nhanh! 🔥</p>
-    </header>
+  <div id="page-home" class="page active">
+    <div class="container">
+      <header>
+        <h1>Chào buổi chiều!</h1>
+        <p>Giữ streak của bạn bằng cách luyện nhanh! 🔥</p>
+      </header>
 
-    <div class="card">
-      <h3>📜 Câu nói của ngày</h3>
-      <p id="quote-text">Đang tải câu nói...</p>
+      <div class="card">
+        <h3>📜 Câu nói của ngày</h3>
+        <p id="quote-text">Đang tải câu nói...</p>
+      </div>
     </div>
+  </div>
 
+  <div id="page-grammar" class="page">
+    <div class="container">
+      <header>
+        <h1>Ngữ pháp</h1>
+      </header>
+      <div class="card">
+        <p>Nội dung các bài học ngữ pháp sẽ xuất hiện ở đây.</p>
+      </div>
     </div>
+  </div>
+
+  <div id="page-quiz" class="page">
+    <div class="container">
+      <header>
+        <h1>Quiz</h1>
+      </header>
+      <div class="card">
+        <p>Nội dung các bài quiz sẽ xuất hiện ở đây.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="page-progress" class="page">
+    <div class="container">
+      <header>
+        <h1>Tiến độ</h1>
+      </header>
+      <div class="card">
+        <p>Nội dung thống kê tiến độ sẽ xuất hiện ở đây.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <nav class="nav-bottom">
+    <a href="#page-home" class="nav-link active" data-page="page-home">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Trang chủ</span>
+    </a>
+    
+    <a href="#page-grammar" class="nav-link" data-page="page-grammar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+      <span>Ngữ pháp</span>
+    </a>
+    
+    <a href="#page-quiz" class="nav-link" data-page="page-quiz">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path><path d="m15 5 4 4"></path></svg>
+      <span>Quiz</span>
+    </a>
+    
+    <a href="#page-progress" class="nav-link" data-page="page-progress">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m18 17-5-5-4 4-3-3"></path></svg>
+      <span>Tiến độ</span>
+    </a>
+  </nav>
 
   <script src="app.js"></script>
 </body>
