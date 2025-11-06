@@ -8,6 +8,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Khởi tạo Gemini
+// KIỂM TRA LƯU Ý BÊN DƯỚI VỀ TÊN MODEL NÀY
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 // 1. Phục vụ các tệp tĩnh (frontend PWA)
@@ -27,8 +28,9 @@ app.post('/api/gemini', async (req, res) => {
       return res.status(400).json({ error: 'Vui lòng cung cấp prompt.' });
     }
 
-    // Gọi model Gemini
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    // Gọi model Gemini theo yêu cầu của bạn
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+    
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const text = response.text();
