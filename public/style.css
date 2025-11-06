@@ -1,69 +1,61 @@
 /* --- THIẾT LẬP CHUNG & PHÔNG CHỮ --- */
 body {
-  /* Dùng phông chữ Public Sans mới */
   font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f4f7f6; /* Màu nền xám rất nhẹ */
-  color: #1a1a1a; /* Màu chữ đen đậm */
+  background-color: #f4f7f6;
+  color: #1a1a1a;
   margin: 0;
   padding: 0;
-  /* Chừa 70px cho thanh tab bar ở dưới */
   padding-bottom: 70px; 
 }
 
-/* Container chính giữ nội dung */
 .container {
   width: 100%;
   max-width: 600px;
-  /* Padding 16px cho mobile, 20px cho desktop */
   padding: 16px; 
   box-sizing: border-box; 
-  margin: 0 auto; /* Tự động căn giữa */
+  margin: 0 auto;
 }
 
 /* --- ĐỊNH DẠNG HEADER (TIÊU ĐỀ) --- */
 header {
   margin-bottom: 24px;
 }
-
 header h1 {
   font-size: 28px;
   font-weight: 700;
   color: #000;
   margin: 0 0 4px 0;
 }
-
 header p {
   font-size: 16px;
-  color: #555; /* Màu xám đậm hơn */
+  color: #555;
   margin: 0;
 }
 
 /* --- ĐỊNH DẠNG THẺ (CARD) CHUNG --- */
 .card {
   background-color: #ffffff;
-  border-radius: 16px; /* Bo góc nhiều hơn */
+  border-radius: 16px;
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* Bóng mờ đẹp hơn */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   margin-bottom: 16px;
 }
-
 .card h3 {
   font-size: 14px;
   font-weight: 600;
   color: #6c757d;
-  margin: 0 0 12px 0; /* Tăng khoảng cách dưới */
+  margin: 0 0 12px 0;
   text-transform: uppercase;
-  letter-spacing: 0.5px; /* Giãn cách chữ */
+  letter-spacing: 0.5px;
 }
-
 .card p {
   font-size: 16px;
   color: #1a1a1a;
   margin: 0;
-  line-height: 1.6; /* Giãn dòng cho dễ đọc */
+  line-height: 1.6;
 }
 
-/* (MỚI) Định dạng cho nội dung Markdown từ Gemini */
+/* Định dạng cho nội dung Markdown từ Gemini */
 .markdown-content p.loading-text {
   font-style: italic;
   color: #555;
@@ -72,19 +64,19 @@ header p {
   margin-bottom: 12px;
   line-height: 1.6;
 }
-.markdown-content h3 {
-  font-size: 18px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+.markdown-content p:last-child {
+  margin-bottom: 0;
+}
+.markdown-content strong {
+  color: #000;
 }
 
-/* --- (MỚI) ĐỊNH DẠNG TRANG NGỮ PHÁP --- */
+/* --- ĐỊNH DẠNG TRANG NGỮ PHÁP --- */
 .list-container {
   display: flex;
   flex-direction: column;
-  gap: 12px; /* Khoảng cách giữa các mục */
+  gap: 12px;
 }
-
 .list-item-card {
   display: flex;
   align-items: center;
@@ -93,40 +85,35 @@ header p {
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  text-decoration: none; /* Bỏ gạch chân link */
-  color: inherit; /* Lấy màu chữ của cha */
+  text-decoration: none;
+  color: inherit;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  -webkit-tap-highlight-color: transparent; /* Tắt highlight khi nhấn */
+  -webkit-tap-highlight-color: transparent;
 }
-
-/* Hiệu ứng khi nhấn vào (trên desktop) */
 .list-item-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
-
 .item-content {
   display: flex;
   align-items: center;
-  gap: 16px; /* Khoảng cách giữa tag và chữ */
+  gap: 16px;
 }
-
 .item-text h3 {
   font-size: 16px;
   font-weight: 600;
   margin: 0 0 4px 0;
   color: #1a1a1a;
 }
-
 .item-text p {
   font-size: 14px;
   margin: 0;
   color: #555;
 }
 
-/* Định dạng tag level (A1, A2) */
+/* Nâng cấp tag level cho "đẹp hơn" */
 .level-tag {
-  flex-shrink: 0; /* Không bị co lại */
+  flex-shrink: 0;
   font-size: 14px;
   font-weight: 700;
   padding: 6px 10px;
@@ -134,28 +121,23 @@ header p {
   color: #fff;
 }
 .level-tag.a1 {
-  background-color: #28a745; /* Màu xanh lá */
+  background: linear-gradient(135deg, #28a745, #218838);
 }
 .level-tag.a2 {
-  background-color: #007bff; /* Màu xanh dương */
+  background: linear-gradient(135deg, #007bff, #0056b3);
 }
 
-/* Định dạng trạng thái (icon hoặc chữ) */
 .item-status {
   font-size: 12px;
   font-weight: 500;
   color: #6c757d;
 }
-
 .item-status.in-progress {
-  color: #fd7e14; /* Màu cam cho "Đang học" */
+  color: #fd7e14;
   font-weight: 700;
 }
 
-
-/* --- CẤU TRÚC ĐA TRANG & NAV BAR (Giữ nguyên) --- */
-
-/* 1. Ẩn/hiện trang */
+/* --- CẤU TRÚC ĐA TRANG & NAV BAR --- */
 body {
   padding-bottom: 70px;
 }
@@ -166,7 +148,6 @@ body {
   display: block;
 }
 
-/* 2. Định dạng thanh Nav Bar */
 .nav-bottom {
   display: flex;
   justify-content: space-around;
@@ -178,34 +159,31 @@ body {
   height: 60px;
   padding-top: 8px;
   background-color: #ffffff;
-  /* Thêm đường viền và bóng mờ tinh tế hơn */
   border-top: 1px solid #e9ecef;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.04);
   z-index: 1000;
 }
-
-/* 3. Định dạng nút (link) trong nav bar */
 .nav-link {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex: 1;
-  color: #888; /* Màu xám cho nút thường (nhạt hơn) */
+  color: #888;
   text-decoration: none;
   font-size: 11px;
   font-weight: 500;
   -webkit-tap-highlight-color: transparent;
-  transition: color 0.2s ease; /* Thêm hiệu ứng chuyển màu */
+  transition: color 0.2s ease;
 }
-
 .nav-link svg {
   width: 24px;
   height: 24px;
   margin-bottom: 2px;
 }
 
-/* 4. Định dạng nút "active" (được chọn) */
+/* Nâng cấp nút active cho "đẹp hơn" */
 .nav-link.active {
-  color: #007aff; /* Màu xanh active */
+  color: #007aff;
+  font-weight: 700; /* In đậm chữ khi active */
 }
