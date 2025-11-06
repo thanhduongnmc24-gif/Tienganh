@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>App học tiếng Anh</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#ffffff">
@@ -20,7 +25,9 @@
 
       <div class="card">
         <h3>📜 Câu nói của ngày</h3>
-        <p id="quote-text">Đang tải câu nói...</p>
+        <div id="quote-text" class="markdown-content">
+          <p class="loading-text">Đang tải câu nói...</p>
+        </div>
       </div>
     </div>
   </div>
@@ -29,9 +36,49 @@
     <div class="container">
       <header>
         <h1>Ngữ pháp</h1>
+        <p>98 chủ đề</p>
       </header>
-      <div class="card">
-        <p>Nội dung các bài học ngữ pháp sẽ xuất hiện ở đây.</p>
+
+      <div class="list-container">
+        <a href="#" class="list-item-card">
+          <div class="item-content">
+            <span class="level-tag a1">A1</span>
+            <div class="item-text">
+              <h3>Danh từ số ít & số nhiều</h3>
+              <p>Học về cách hình thành danh từ số nhiều... </p>
+            </div>
+          </div>
+          <div class="item-status">
+            <span>📚</span>
+          </div>
+        </a>
+        
+        <a href="#" class="list-item-card">
+          <div class="item-content">
+            <span class="level-tag a1">A1</span>
+            <div class="item-text">
+              <h3>Thì Quá khứ Đơn (động từ thường)</h3>
+              <p>Diễn tả một hành động đã bắt đầu và kết thúc...</p>
+            </div>
+          </div>
+          <div class="item-status in-progress">
+            <span>Đang học</span>
+          </div>
+        </a>
+
+        <a href="#" class="list-item-card">
+          <div class="item-content">
+            <span class="level-tag a2">A2</span>
+            <div class="item-text">
+              <h3>Động từ 'to be' (am/is/are)</h3>
+              <p>Động từ 'to be' là một trong những động từ...</p>
+            </div>
+          </div>
+          <div class="item-status">
+            <span>📚</span>
+          </div>
+        </a>
+        
       </div>
     </div>
   </div>
@@ -64,17 +111,14 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
       <span>Trang chủ</span>
     </a>
-    
     <a href="#page-grammar" class="nav-link" data-page="page-grammar">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
       <span>Ngữ pháp</span>
     </a>
-    
     <a href="#page-quiz" class="nav-link" data-page="page-quiz">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path><path d="m15 5 4 4"></path></svg>
       <span>Quiz</span>
     </a>
-    
     <a href="#page-progress" class="nav-link" data-page="page-progress">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m18 17-5-5-4 4-3-3"></path></svg>
       <span>Tiến độ</span>
