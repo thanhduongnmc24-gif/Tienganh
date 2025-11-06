@@ -1,0 +1,67 @@
+/* Thiết lập chung */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #1c1e21;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Container chính giữ nội dung */
+.container {
+  width: 100%;
+  max-width: 600px; /* Giới hạn độ rộng trên máy tính */
+  padding: 20px;
+  box-sizing: border-box; /* Đảm bảo padding không làm vỡ layout */
+}
+
+/* Phần đầu trang */
+header {
+  margin-bottom: 24px;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 4px 0;
+}
+
+header p {
+  font-size: 16px;
+  color: #65676b;
+  margin: 0;
+}
+
+/* Định dạng thẻ (Card) */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Bóng mờ nhẹ */
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #65676b; /* Màu xám cho tiêu đề phụ */
+  margin: 0 0 8px 0;
+  text-transform: uppercase; /* Viết hoa */
+}
+
+.card p {
+  font-size: 16px;
+  color: #050505;
+  margin: 0;
+  line-height: 1.5; /* Giãn dòng cho dễ đọc */
+}
+
+/* ID cho câu nói của ngày */
+#quote-text {
+  font-style: italic; /* In nghiêng */
+}
