@@ -1,67 +1,61 @@
-/* Thiết lập chung */
+/* --- BẮT ĐẦU CSS CHO CẤU TRÚC ĐA TRANG --- */
+
+/* * 1. Ẩn tất cả các "page" theo mặc định
+ * Chúng ta sẽ dùng 70px để chừa chỗ cho thanh tab bar ở dưới
+ */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f0f2f5;
-  color: #1c1e21;
-  margin: 0;
-  padding: 0;
+  padding-bottom: 70px; /* Chừa khoảng trống cho nav bar */
+}
+
+.page {
+  display: none; /* Ẩn tất cả các trang */
+}
+
+/* 2. Chỉ hiện trang có class "active" */
+.page.active {
+  display: block; /* Hiện trang được chọn */
+}
+
+
+/* 3. Định dạng thanh Nav Bar cố định ở cuối */
+.nav-bottom {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-}
-
-/* Container chính giữ nội dung */
-.container {
-  width: 100%;
-  max-width: 600px; /* Giới hạn độ rộng trên máy tính */
-  padding: 20px;
-  box-sizing: border-box; /* Đảm bảo padding không làm vỡ layout */
-}
-
-/* Phần đầu trang */
-header {
-  margin-bottom: 24px;
-}
-
-header h1 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #000;
-  margin: 0 0 4px 0;
-}
-
-header p {
-  font-size: 16px;
-  color: #65676b;
-  margin: 0;
-}
-
-/* Định dạng thẻ (Card) */
-.card {
+  justify-content: space-around; /* Căn đều các nút */
+  align-items: flex-start; /* Căn icon/chữ lên trên */
+  position: fixed; /* Cố định ở cuối màn hình */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* Chiều cao thanh nav */
+  padding-top: 8px; /* Khoảng cách từ mép trên thanh nav đến icon */
   background-color: #ffffff;
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Bóng mờ nhẹ */
-  margin-bottom: 16px;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.03);
+  z-index: 1000;
 }
 
-.card h3 {
-  font-size: 14px;
-  font-weight: 600;
-  color: #65676b; /* Màu xám cho tiêu đề phụ */
-  margin: 0 0 8px 0;
-  text-transform: uppercase; /* Viết hoa */
+/* 4. Định dạng từng nút (link) trong nav bar */
+.nav-link {
+  display: flex;
+  flex-direction: column; /* Icon trên, chữ dưới */
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Chia đều không gian */
+  color: #909090; /* Màu xám cho nút thường */
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 500;
+  -webkit-tap-highlight-color: transparent; /* Tắt highlight khi nhấn trên mobile */
 }
 
-.card p {
-  font-size: 16px;
-  color: #050505;
-  margin: 0;
-  line-height: 1.5; /* Giãn dòng cho dễ đọc */
+.nav-link svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 2px;
 }
 
-/* ID cho câu nói của ngày */
-#quote-text {
-  font-style: italic; /* In nghiêng */
+/* 5. Định dạng nút "active" (được chọn) */
+.nav-link.active {
+  color: #007aff; /* Màu xanh dương (giống iOS) cho nút active */
 }
+/* --- KẾT THÚC CSS CHO CẤU TRÚC ĐA TRANG --- */
